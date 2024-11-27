@@ -12,7 +12,7 @@ public class Char3 : ABSTRACT
     {
         if (GUI.Button(new Rect(614, 85, 257, 74), "Mage"))
         {
-            ui.Information = ("Health: " + Health + "\nAttack" + "\nDefense: " + Defense);
+            ui.Stats = ("Health: " + Health + "\nAttack" + Attack + "\nDefense: " + Defense);
         }
     }
 }

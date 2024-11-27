@@ -7,9 +7,15 @@ public class DemonKing : ABSTRACT
     [SerializeField] private UI ui;
     public Vector2 Position;
     public Vector2 Size;
+    public string Demonic = "Health:  \nDefense: \nAttack: ";
+
+    private void Start()
+    {
+      Demonic = ("Demon King \nHealth: " + Health + "\nAttack" + Attack + "\nDefense: " + Defense);
+    }
 
     private void OnGUI()
     {
-      ui.Information = ("Health: " + Health + "\nAttack" + "\nDefense: " + Defense);
+        GUI.Box(new Rect(82, 306, 763, 163), "Demon King");
     }
 }

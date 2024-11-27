@@ -122,7 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &149236201
+--- !u!1 &687455856
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,8 +130,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 149236203}
-  - component: {fileID: 149236202}
+  - component: {fileID: 687455858}
+  - component: {fileID: 687455857}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -139,18 +139,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &149236202
+--- !u!114 &687455857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149236201}
+  m_GameObject: {fileID: 687455856}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 947f97b7f13754f45aa45bdafeacd69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 0
+  Attack: 0
+  Defense: 0
   style:
     m_Name: 
     m_Normal:
@@ -220,14 +223,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   Position: {x: 0, y: 0}
   Size: {x: 0, y: 0}
-  Information: "Health: \nDefense: "
---- !u!4 &149236203
+  Stats: "Health:  \nDefense: \nAttack: "
+  Swordsman: "Health:  \nDefense: \nAttack: "
+  Demon: "Health:  \nDefense: \nAttack: "
+  Current: 'Health:  '
+--- !u!4 &687455858
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149236201}
+  m_GameObject: {fileID: 687455856}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -330,7 +336,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &958067124
+--- !u!1 &866378376
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,40 +344,91 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 958067126}
-  - component: {fileID: 958067125}
+  - component: {fileID: 866378378}
+  - component: {fileID: 866378377}
   m_Layer: 0
-  m_Name: MAGE
+  m_Name: SWORDSMAN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &958067125
+--- !u!114 &866378377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958067124}
+  m_GameObject: {fileID: 866378376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ebe392811787644ebcc876d6ca247c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b30bcf4ad02b654898bf08c15013384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  Attack: 0
-  Defense: 0
-  ui: {fileID: 0}
+  Health: 120
+  Attack: 52
+  Defense: 30
+  ui: {fileID: 687455857}
   Position: {x: 0, y: 0}
   Size: {x: 0, y: 0}
---- !u!4 &958067126
+--- !u!4 &866378378
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958067124}
+  m_GameObject: {fileID: 866378376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959726321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959726323}
+  - component: {fileID: 959726322}
+  m_Layer: 0
+  m_Name: DEMON KING
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &959726322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959726321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424f27478f699d84387e6e2cf60ee814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  Attack: 60
+  Defense: 25
+  ui: {fileID: 687455857}
+  Position: {x: 0, y: 0}
+  Size: {x: 0, y: 0}
+  Demonic: "Health:  \nDefense: \nAttack: "
+--- !u!4 &959726323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959726321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -472,7 +529,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1113857579
+--- !u!1 &1131101154
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,40 +537,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1113857581}
-  - component: {fileID: 1113857580}
+  - component: {fileID: 1131101156}
+  - component: {fileID: 1131101155}
   m_Layer: 0
-  m_Name: SWORDSMAN
+  m_Name: MAGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1113857580
+--- !u!114 &1131101155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113857579}
+  m_GameObject: {fileID: 1131101154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b30bcf4ad02b654898bf08c15013384, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ebe392811787644ebcc876d6ca247c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  Attack: 0
-  Defense: 0
-  ui: {fileID: 0}
+  Health: 80
+  Attack: 65
+  Defense: 55
+  ui: {fileID: 687455857}
   Position: {x: 0, y: 0}
   Size: {x: 0, y: 0}
---- !u!4 &1113857581
+--- !u!4 &1131101156
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113857579}
+  m_GameObject: {fileID: 1131101154}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -522,7 +579,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2039858366
+--- !u!1 &1421918033
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -530,8 +587,115 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2039858368}
-  - component: {fileID: 2039858367}
+  - component: {fileID: 1421918035}
+  - component: {fileID: 1421918034}
+  m_Layer: 0
+  m_Name: accept
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1421918034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421918033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bfd2378b7c57e4383322d402735d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0}
+  Size: {x: 0, y: 0}
+  Swordsman: {fileID: 866378377}
+  Archer: {fileID: 2131192086}
+  Mage: {fileID: 1131101155}
+  pHealth: 0
+  pyHealth: 'Health: '
+--- !u!4 &1421918035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421918033}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1744395744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744395746}
+  - component: {fileID: 1744395745}
+  m_Layer: 0
+  m_Name: DMG CALCU
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1744395745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744395744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b6a7626fb869c499abf605832c21be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  Attack: 0
+  Defense: 0
+  character1: {fileID: 866378377}
+  character2: {fileID: 2131192086}
+  character3: {fileID: 1131101155}
+  acceptbutton: {fileID: 1421918034}
+  demonking: {fileID: 959726322}
+  Position: {x: 0, y: 0}
+  Size: {x: 0, y: 0}
+  calcuHealth: 'Health: '
+  defeat: 
+--- !u!4 &1744395746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744395744}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2131192085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131192087}
+  - component: {fileID: 2131192086}
   m_Layer: 0
   m_Name: ARCHER
   m_TagString: Untagged
@@ -539,31 +703,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2039858367
+--- !u!114 &2131192086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039858366}
+  m_GameObject: {fileID: 2131192085}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ab2fc0f194a5c245bbfbf4102841a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  Attack: 0
-  Defense: 0
-  ui: {fileID: 0}
+  Health: 100
+  Attack: 30
+  Defense: 15
+  ui: {fileID: 687455857}
   Position: {x: 0, y: 0}
   Size: {x: 0, y: 0}
---- !u!4 &2039858368
+--- !u!4 &2131192087
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039858366}
+  m_GameObject: {fileID: 2131192085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -578,7 +742,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 149236203}
-  - {fileID: 1113857581}
-  - {fileID: 2039858368}
-  - {fileID: 958067126}
+  - {fileID: 687455858}
+  - {fileID: 866378378}
+  - {fileID: 2131192087}
+  - {fileID: 1131101156}
+  - {fileID: 959726323}
+  - {fileID: 1744395746}
+  - {fileID: 1421918035}

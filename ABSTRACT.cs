@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ABSTRACT : MonoBehaviour
 {
-    [SerializeField] protected int Health;
-    [SerializeField] protected int Attack;
-    [SerializeField] protected int Defense;
+    [SerializeField] public int Health;
+    [SerializeField] public int Attack;
+    [SerializeField] public int Defense;
 }
